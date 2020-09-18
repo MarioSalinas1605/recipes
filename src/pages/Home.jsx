@@ -6,17 +6,18 @@ import mealdb from '../mealdb-api'
 
 export const Home = () => {
     const [recipes, setRecipes] = useState(null)
-    const [isLoading, setisLoading] = useState(true)
+    const [isLoading, setIsLoading] = useState(true)
 
     const fetchMeal = async () => {
         try {
             const data = await mealdb.getLatest()
             console.log(data)
             setRecipes(data)
-            setisLoading(false)
+            setIsLoading(false)
         } catch (error) {
             console.log(error)
             setRecipes(null)
+            setIsLoading(false)
         }
     }
 
