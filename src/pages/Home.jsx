@@ -29,7 +29,7 @@ export const Home = () => {
         return <div className="message">Cargando...</div>
     }
 
-    return <>
+    return <React.Fragment>
         <Helmet>
             <title>Recetas</title>
         </Helmet>
@@ -44,5 +44,5 @@ export const Home = () => {
                 </Link>
             ))}
         </div>
-    </>
+    </React.Fragment>
 }
