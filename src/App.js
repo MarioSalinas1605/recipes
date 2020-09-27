@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Link } from "react-router-dom"
 import { Home } from './pages/Home.jsx'
 import { Recipe } from './pages/Recipe.jsx'
 import { Timer } from './pages/Timer.jsx'
+import { IfOffline } from './components/IfOffline'
 import './App.css';
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
     <BrowserRouter>
         <div>
           <header>
-            <Link to="/">Recetas</Link>
+            <Link to="/">Recetas <IfOffline>Offline</IfOffline></Link>
           </header>
 
           <main>
